@@ -1,0 +1,29 @@
+$breakpoint-medium: 768px;
+$breakpoint-large: 1200px;
+$breakpoint-xlarge: 1440px;
+$media: (
+	s: 'screen and (max-width: #{$breakpoint-medium - 1})',
+	m: 'screen and (min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-large - 1})',
+	l: 'screen and (min-width: #{$breakpoint-large}) and (max-width: #{$breakpoint-xlarge - 1})',
+	xl: 'screen and (min-width: #{$breakpoint-xlarge})',
+	m-up: 'screen and (min-width: #{$breakpoint-medium})',
+	m-down: 'screen and (max-width: #{$breakpoint-large - 1})',
+	l-up: 'screen and (min-width: #{$breakpoint-large})',
+);
+
+// stylelint-disable
+@mixin media($query) {
+	$__query: null;
+
+	@each $type in $query {
+		@if map-has-key($media, $type) {
+			$__query: append($__query, unquote(map-get($media, $type)), comma);
+		} @else {
+			@warn $type;
+		}
+	}
+
+	@media #{$__query} {
+		@content;
+	}
+}

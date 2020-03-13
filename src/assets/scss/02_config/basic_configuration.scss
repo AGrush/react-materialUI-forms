@@ -1,0 +1,43 @@
+/*
+##Layout
+*/
+
+@mixin css-variables-layout {
+	:root {
+		--content-width: 1200px;
+		--grid-gutter: 20px;
+
+		@include media(xl) {
+			--content-width: 1440px;
+		}
+
+		@include media(l) {
+			--grid-gutter: 12px;
+		}
+
+		@include media(m) {
+			--grid-gutter: 8px;
+		}
+	}
+}
+
+$max-content-width: var(--content-width);
+
+@mixin site-width { // TODO: move to 03-core
+	margin: 0 auto;
+	max-width: $max-content-width;
+	padding: 0 60px;
+
+	@include media(m) {
+		padding: 0 34px;
+	}
+
+	@include media(s) {
+		padding: 0 20px;
+	}
+}
+
+/*
+##Font
+*/
+$global-letter-spacing: normal;

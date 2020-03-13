@@ -1,0 +1,10 @@
+/*md
+
+# Foundation grid for no css grid system
+
+https://foundation.zurb.com/sites/docs/xy-grid.html
+
+*/
+
+@import '../03_vendors/foundation';
+@include foundation-xy-grid-classes;

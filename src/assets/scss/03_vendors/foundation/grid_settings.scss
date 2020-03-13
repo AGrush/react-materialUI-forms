@@ -1,0 +1,61 @@
+/*
+---
+name: Grids
+category: Documentation/Grids
+---
+<section class='t-user_content'>
+
+	<p>We used modern grid system from Foundation - XY Grid system, and
+	integrated them into our code.</p>
+
+	<p>For developers - it's a possibility to use @mixins for development.</p>
+
+	<p>Content managers - can use grid classes to create content layout.</p>
+
+	<p>You can find all needed information in official documentation.</p>
+
+	<p>Here's a link: <br/>
+
+	<a target="_blank" href="https://foundation.zurb.com/sites/docs/xy-grid.html">https://foundation.zurb.com/sites/docs/xy-grid.html</a></p>
+
+</section>
+*/
+// Foundation for Sites by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+$global-width: 1200px;
+
+// Sets the text direction of the CSS. Can be either `ltr` or `rtl`.
+// @type Keyword
+$global-text-direction: ltr;
+
+// Internal variables used for text direction
+$global-left: if($global-text-direction == rtl, right, left);
+$global-right: if($global-text-direction == rtl, left, right);
+
+$breakpoints: (
+	small: 0,
+	medium: 768px,
+	large: 1200px,
+	xlarge: 1440px,
+);
+
+$grid-container: $global-width;
+$grid-columns: 12;
+$grid-margin-gutters: (
+	small: 40px,
+	medium: 16px,
+	large: 24px,
+	xlarge: 24px,
+) !default;
+$grid-container-max: $global-width;
+
+$xy-block-grid-max: 8;
+
+$grid-container-padding: (
+	small: 40px,
+	medium: 32px,
+	large: 40px,
+	xlarge: 40px,
+) !default;

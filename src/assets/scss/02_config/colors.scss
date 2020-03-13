@@ -1,0 +1,13 @@
+@mixin css-variables-colors {
+	:root {
+		--color-dark: #000;
+		--color-lighter1: #434343;
+		--color-lighter2: #808080;
+		--color-lighter3: #a0a0a0;
+		--color-lighter4: #d8d8d8;
+		--color-lighter5: #ededed;
+		--color-lighter6: #f9f9f9;
+		--color-light: #fff;
+		--color-pdp-background: transparent;
+	}
+}

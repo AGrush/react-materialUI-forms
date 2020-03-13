@@ -1,0 +1,8 @@
+@import '01_mixins/all';
+@import '02_config/all';
+@import '03_vendors/all';
+@import '04_components/all';
+
+// Initialize core styles
+@include css-variables-layout;
+@include css-variables-colors;
